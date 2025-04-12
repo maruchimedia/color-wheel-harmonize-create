@@ -90,9 +90,6 @@ const ColorWheel: React.FC<ColorWheelProps> = ({
     // Convert to 0-360 range
     angle = (angle + 360) % 360;
     
-    // Adjust angle to match color wheel (0 at right, going clockwise)
-    angle = (angle + 90) % 360;
-    
     return angle;
   };
   
@@ -133,7 +130,7 @@ const ColorWheel: React.FC<ColorWheelProps> = ({
   };
   
   // Calculate indicator position
-  const indicatorAngleRad = (selectedAngle - 90) * (Math.PI / 180);
+  const indicatorAngleRad = selectedAngle * (Math.PI / 180);
   const indicatorRadius = (size / 2) * 0.85;
   const indicatorX = (size / 2) + indicatorRadius * Math.cos(indicatorAngleRad);
   const indicatorY = (size / 2) + indicatorRadius * Math.sin(indicatorAngleRad);
