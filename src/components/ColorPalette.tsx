@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { getTextColor } from '@/lib/colorUtils';
-import { Clipboard, Check } from 'lucide-react';
+import { ClipboardCopy, Check } from 'lucide-react';
 import { toast } from 'sonner';
 
 interface ColorPaletteProps {
@@ -39,7 +39,7 @@ const ColorPalette: React.FC<ColorPaletteProps> = ({ colors, name }) => {
               {copiedIndex === index ? (
                 <Check className="h-5 w-5" style={{ color: getTextColor(color) }} />
               ) : (
-                <Clipboard className="h-5 w-5" style={{ color: getTextColor(color) }} />
+                <ClipboardCopy className="h-5 w-5" style={{ color: getTextColor(color) }} />
               )}
             </div>
             <div className="absolute bottom-1 right-1 text-xs font-mono" style={{ color: getTextColor(color) }}>

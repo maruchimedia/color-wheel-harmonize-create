@@ -12,7 +12,7 @@ import {
 import { 
   Slider 
 } from '@/components/ui/slider';
-import { Palette, Save, Download } from 'lucide-react';
+import { Palette, Save, Download, ClipboardCopy } from 'lucide-react';
 import { toast } from 'sonner';
 
 const Index = () => {
@@ -214,7 +214,7 @@ const Index = () => {
                         }}
                       >
                         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/10">
-                          <Clipboard className="h-4 w-4 text-white" />
+                          <ClipboardCopy className="h-4 w-4 text-white" />
                         </div>
                         <div className="absolute bottom-1 right-1 text-xs font-mono text-white">
                           {color}
